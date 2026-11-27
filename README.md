@@ -2,9 +2,9 @@
 [![rank](https://make.fun/badge/best-flight-game-20261126-0057/1556301539-dot/flight-game-20261126/rank.svg)](https://make.fun/bounty/best-flight-game-20261126-0057/leaderboard)
 [![reward](https://make.fun/badge/best-flight-game-20261126-0057/1556301539-dot/flight-game-20261126/reward.svg)](https://make.fun/bounty/best-flight-game-20261126-0057)
 
-# Ridgeline Courier
+# Ember Watch
 
-A bush-plane flight game for the [make.fun best flight game bounty](https://make.fun/bounty/best-flight-game-20261126-0057). Fly a little courier aircraft through the Kestrel Valley: thread the ring course against the clock, deliver parcels between two dirt airstrips, or just explore until the tank runs dry. Pure static files — no build step, no network, no libraries. The terrain, the aircraft, the instruments and the sounds are all hand-written.
+A wildfire-spotter flight game for the [make.fun best flight game bounty](https://make.fun/bounty/best-flight-game-20261126-0057). Fly a little fire-spotter plane over the Kestrel Valley: thread the lookout course against the clock, drop water between two dirt airstrips, or just patrol until the tank runs dry. Pure static files — no build step, no network, no libraries. The terrain, the aircraft, the instruments and the sounds are all hand-written.
 
 ## Play
 
@@ -23,7 +23,7 @@ Or open `game/index.html` straight from disk — it plays from a file too.
 | P | Pause |
 | R | Fly again |
 | M | Sound on / off |
-| 1 / 2 / 3 | Ring Run / Courier / Free Flight |
+| 1 / 2 / 3 | Patrol Run / Water Drop / Free Patrol |
 
 Throttle discipline matters: climb bleeds speed, slow flight stalls, fuel runs out, and a landing is judged on speed, sink rate and alignment. A hard touchdown on the grass is a bush landing — allowed, but it costs the airframe.
 
@@ -34,7 +34,7 @@ Throttle discipline matters: climb bleeds speed, slow flight stalls, fuel runs o
 - `game/src/plane.js` — the aircraft, built from flat-shaded triangles.
 - `game/src/world.js` — the ring course, runway paint, airfield buildings, pines, clouds, windsock.
 - `game/src/physics.js` — the flight model: thrust, drag, stalls, turns, landings, crashes.
-- `game/src/missions.js` — Ring Run, Courier and Free Flight, and the score.
+- `game/src/missions.js` — Patrol Run, Water Drop and Free Patrol, and the score.
 - `game/src/render.js` — the software 3D renderer, the HUD instruments and the screens.
 - `game/src/input.js`, `game/src/audio.js`, `game/src/main.js` — controls, synthesised sound, the loop.
 - `main.ts` — the hand-in program (Node 22, standard library only): copies `game/` and `screenshots/` and writes `dossier.json`.

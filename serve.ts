@@ -39,7 +39,7 @@ const server = createServer((req, res) => {
 
 server.listen(port, () => {
   const url = 'http://localhost:' + port + '/';
-  console.log('Ridgeline Courier at ' + url);
+  console.log('Ember Watch at ' + url);
   const open = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start' : 'xdg-open';
   exec(open + ' ' + url, () => {});
 });

@@ -1,4 +1,4 @@
-// main.ts — the hand-in program for Ridgeline Courier (Node 22, standard
+// main.ts — the hand-in program for Ember Watch (Node 22, standard
 // library only). It takes the game in game/ and the screenshots in
 // screenshots/, copies them to the output directory, and writes the dossier
 // the judge reads, using the vendored make.fun library. Run it anywhere

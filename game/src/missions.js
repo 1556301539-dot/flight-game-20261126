@@ -1,6 +1,6 @@
-// missions.js — the three sorties and the score. Ring Run is a timed course
-// of eight rings and a landing; Courier is a pickup, a delivery and a return
-// leg; Free Flight is just the valley, the fuel gauge and your nerve. The
+// missions.js — the three sorties and the score. Patrol Run is a timed course
+// of eight lookout points and a landing; Water Drop is a fill, a drop and a
+// return leg; Free Patrol is just the valley, the fuel gauge and your nerve. The
 // judge's second criterion is fun with decisions: fuel and damage are what
 // turn a sortie into decisions, so both are scored against here.
 (function () {
@@ -16,7 +16,7 @@
       time: 0,
       ringsHit: 0,
       nextRing: 0,          // index into World.rings
-      leg: 0,               // courier legs: 0 pickup, 1 deliver, 2 return
+      leg: 0,               // water-drop legs: 0 fill, 1 drop, 2 return
       distance: 0,          // metres flown while airborne
       done: false,
       doneText: '',
@@ -87,11 +87,11 @@
             m.score += CFG.deliveryBonus;
             m.leg = 2;
             m._landedScored = false;
-            events.push({ type: 'objective', text: 'Parcel delivered. Fly home to Kestrel.' });
+            events.push({ type: 'objective', text: 'Water dropped. Fly home to Kestrel.' });
           } else if (m.leg === 2 && strip === 'Kestrel Field') {
             m.score += CFG.landingBonus;
             m.done = true;
-            m.doneText = 'Courier run complete, ' + m.score + ' pts';
+            m.doneText = 'Water drop complete, ' + m.score + ' pts';
           } else if (strip) {
             m.score += 100;
             m.done = true;
@@ -119,16 +119,16 @@
     if (m.done) return m.doneText;
     if (m.kind === 'rings') {
       if (m.nextRing < W.rings.length) {
-        return 'Ring ' + (m.nextRing + 1) + ' of ' + W.rings.length + '. Fly through it.';
+        return 'Lookout ' + (m.nextRing + 1) + ' of ' + W.rings.length + '. Fly through it.';
       }
       return 'Course clear. Land at Kestrel Field.';
     }
     if (m.kind === 'courier') {
-      if (m.leg === 0) return 'Pick up the parcel. Fly through the ring over Kestrel.';
-      if (m.leg === 1) return 'Deliver to Pine Hollow. Land on its strip.';
+      if (m.leg === 0) return 'Fill the tank. Fly through the ring over Kestrel.';
+      if (m.leg === 1) return 'Drop water at Pine Hollow. Land on its strip.';
       return 'Return home. Land at Kestrel Field.';
     }
-    return 'Free flight. Explore the valley, watch your fuel.';
+    return 'Free patrol. Watch for smoke, mind your fuel.';
   }
 
   function nextRingTarget(m) {

@@ -1,4 +1,4 @@
-// config.js — every tunable number for Ridgeline Courier in one place.
+// config.js — every tunable number for Ember Watch in one place.
 // World units are metres; speeds are m/s internally (HUD shows knots).
 // Nothing here touches the network or the DOM: pure data.
 (function () {
@@ -42,8 +42,8 @@
     ringPoints: 100,
     landingBonus: 250,
     deliveryBonus: 400,
-    timeBonusPerSec: 2,     // bonus per second under par in Ring Run
-    ringRunPar: 240,        // seconds par for the ring course
+    timeBonusPerSec: 2,     // bonus per second under par in the patrol run
+    ringRunPar: 240,        // seconds par for the patrol course
     // ---- rendering ----
     viewCells: 30,          // terrain cells drawn each side of the camera
     farRidgeRadius: 2400,   // distant mountain silhouette distance

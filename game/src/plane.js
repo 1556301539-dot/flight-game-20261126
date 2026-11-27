@@ -1,4 +1,4 @@
-// plane.js — the Kestrel courier aircraft, built from flat-shaded triangles
+// plane.js — the Kestrel fire-spotter aircraft, built from flat-shaded triangles
 // in plane-local space (+Z forward, +X right, +Y up). Cream fuselage, red
 // cheatline and wingtips, dark glass: it reads as one built machine, not a
 // drawn icon. The same model is projected for the chase view and the nose

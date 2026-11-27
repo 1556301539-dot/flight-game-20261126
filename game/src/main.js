@@ -53,8 +53,8 @@
   }
 
   function setStatus(text) {
-    if (statusEl) statusEl.textContent = 'Ridgeline Courier: ' + text;
-    document.title = 'Ridgeline Courier — ' + text;
+    if (statusEl) statusEl.textContent = 'Ember Watch: ' + text;
+    document.title = 'Ember Watch — ' + text;
   }
 
   // ---- ?shot= staging: a frozen frame of the real game ----
@@ -127,7 +127,7 @@
     for (var i = 0; i < events.length; i++) {
       var e = events[i];
       if (e.type === 'ring') {
-        setFlash('Ring ' + (e.index + 1) + ' cleared, +' + CFG.ringPoints + ' pts');
+        setFlash('Lookout ' + (e.index + 1) + ' cleared, +' + CFG.ringPoints + ' pts');
         FG.Audio.chime();
       } else if (e.type === 'takeoff') {
         setFlash('Airborne. Fly the course.');

@@ -478,7 +478,7 @@
     var mm = Math.floor(mission.time / 60), ss = Math.floor(mission.time % 60);
     ctx.fillText('Score ' + mission.score + '  ' + String(mm).padStart(2, '0') + ':' + String(ss).padStart(2, '0'), x + 10, y + 76);
     ctx.textAlign = 'right';
-    ctx.fillText('Rings ' + mission.ringsHit + '/' + W.rings.length, x + w - 10, y + 76);
+    ctx.fillText('Lookouts ' + mission.ringsHit + '/' + W.rings.length, x + w - 10, y + 76);
     ctx.textAlign = 'left';
   }
 
@@ -541,7 +541,7 @@
     ctx.font = F_BODY_B;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'alphabetic';
-    ctx.fillText('Ridgeline Courier', 16, 30);
+    ctx.fillText('Ember Watch', 16, 30);
     ctx.fillStyle = TH.muted;
     ctx.font = F_BODY;
     ctx.fillText(FG.Missions.objectiveText(mission), 16, 52);
@@ -795,17 +795,17 @@
     ctx.fillStyle = ink;
     ctx.font = F_DISPLAY;
     ctx.textAlign = 'left';
-    ctx.fillText('Ridgeline', tx, cy0 + 78);
-    ctx.fillText('Courier', tx, cy0 + 134);
+    ctx.fillText('Ember', tx, cy0 + 78);
+    ctx.fillText('Watch', tx, cy0 + 134);
     ctx.fillStyle = TH.amber;
     ctx.fillRect(tx, cy0 + 152, 64, 4);
     ctx.fillStyle = ink;
     ctx.font = F_BODY;
-    ctx.fillText('A bush plane, a valley, and a parcel that will not wait.', tx, cy0 + 182);
+    ctx.fillText('A fire-spotter plane, a dry valley, and smoke over the pines.', tx, cy0 + 182);
     var rows = [
-      { key: '1', kind: 'rings', name: 'Ring run', route: 'Eight rings down the valley, against the clock, then land at Kestrel Field.', fuel: 'Full tank' },
-      { key: '2', kind: 'courier', name: 'Courier', route: 'Pick up over Kestrel, deliver to Pine Hollow, fly home.', fuel: 'Watch the gauge' },
-      { key: '3', kind: 'free', name: 'Free flight', route: 'No course, no clock. Explore the valley until the tank runs dry.', fuel: 'Full tank' }
+      { key: '1', kind: 'rings', name: 'Patrol run', route: 'Eight lookout points down the valley, against the clock, then land at Kestrel Field.', fuel: 'Full tank' },
+      { key: '2', kind: 'courier', name: 'Water drop', route: 'Fill the tank over Kestrel, drop water at Pine Hollow, fly home.', fuel: 'Watch the gauge' },
+      { key: '3', kind: 'free', name: 'Free patrol', route: 'No course, no clock. Watch for smoke until the tank runs dry.', fuel: 'Full tank' }
     ];
     var ty = cy0 + 216;
     ctx.font = F_LABEL;
